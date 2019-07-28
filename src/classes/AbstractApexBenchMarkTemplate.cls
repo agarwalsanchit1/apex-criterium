@@ -1,6 +1,6 @@
 /*************************************************************************************************
 * This file is part of the apex-limit-framework project, released under the MIT License.             *
-* See LICENSE file or go to https://github.com/agarwalsanchit1/apex-limits-framework for full license details. *
+* See LICENSE file or go to https://github.com/agarwalsanchit1/apex-criterium for full license details. *
 *************************************************************************************************/
 
 global abstract class AbstractApexBenchMarkTemplate extends ApexBaseObject {
@@ -28,23 +28,23 @@ global abstract class AbstractApexBenchMarkTemplate extends ApexBaseObject {
         this.beforeLimitPrinterStyle = beforeLimitPrinterStyle; this.afterLimitPrinterStyle = afterLimitPrinterStyle;
     }
     
-    global void printApexLimit(ApexLimits.ApexLimitType paramLimitType, ApexLimits.IApexLimitStylePrinter printStyle) {
+    global void printApexLimitFor(ApexLimits.ApexLimitType paramLimitType, ApexLimits.IApexLimitStylePrinter printStyle) {
         ApexLimits.apexLimitForType(paramLimitType).printApexLimit(printStyle);
     }
     
     global void printBeforeLimits() {
-        ApexLimits.printApexLimit(this.beforeLimitPrinterStyle);
+        ApexLimits.getIApexLimitHolder().printAllApexLimits(this.beforeLimitPrinterStyle);
     }
     
     global void printAfterLimits() {
-        ApexLimits.printApexLimit(this.afterLimitPrinterStyle);
+        ApexLimits.getIApexLimitHolder().printAllApexLimits(this.afterLimitPrinterStyle, ApexLimits.ApexLimitsSortingType.BY_CONSUMED_VALUE, false);
     }
     
     global abstract void benchMarkCode();
     
     global void runBenchMarkCode() {
-        Long startAt = System.now().getTime();
-        this.printBeforeLimits();        
+        this.printBeforeLimits();
+        Long startAt = System.now().getTime();       
         System.debug('Executing started at ' + startAt + ' ms');
         this.benchMarkCode();        
         Long endedAt = System.now().getTime();
@@ -52,14 +52,14 @@ global abstract class AbstractApexBenchMarkTemplate extends ApexBaseObject {
         this.printAfterLimits();
     }
     
-    global class BeforeExecutionApexLimitPrintStyle implements ApexLimits.IApexLimitStylePrinter {
+    global class BeforeExecutionApexLimitPrintStyle implements IDefault, ApexLimits.IApexLimitStylePrinter {
     
         global void printStyle(ApexLimits.ApexLimit paramLimit) {
             System.debug('Before Executing ' + paramLimit.toString());
         }
     } 
     
-    global class AfterExecutionApexLimitPrintStyle implements ApexLimits.IApexLimitStylePrinter {
+    global class AfterExecutionApexLimitPrintStyle implements IDefault, ApexLimits.IApexLimitStylePrinter {
     
         global void printStyle(ApexLimits.ApexLimit paramLimit) {
             System.debug('After Executing ' + paramLimit.toString());
