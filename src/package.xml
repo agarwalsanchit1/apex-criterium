@@ -1,5 +1,77 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>SFoundationAPI - Limit Framework</fullName>
-    <version>38.0</version>
+    <fullName>apex-criterium</fullName>
+    <description>A framework that provides additional capabilities to the Salesforce Limit API and provides the platform to  to do bench marking for any code with each and every limits.</description>
+    <types>
+        <members>AbstractApexBenchMarkTemplate</members>
+        <members>ApexBaseObject</members>
+        <members>ApexLimitOptions</members>
+        <members>ApexLimits</members>
+        <members>ApexLimitsGlobalConfig</members>
+        <members>ApexLimitsRangeConfiguration</members>
+        <members>ApexLimitsRegistry</members>
+        <members>ApexLimitsTest</members>
+        <members>IClassName</members>
+        <members>IDefault</members>
+        <members>IllegalArgumentException</members>
+        <members>IllegalStateException</members>
+        <members>NullPointerException</members>
+        <members>Preconditions</members>
+        <members>SampleBenchMarkerTemplate</members>
+        <members>SampleBenchMarkerTemplateTest</members>
+        <members>SystemEnvironment</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ApexLimitsConfiguration__mdt.All_From__c</members>
+        <members>ApexLimitsConfiguration__mdt.All_To__c</members>
+        <members>ApexLimitsConfiguration__mdt.Apex_Class__c</members>
+        <members>ApexLimitsConfiguration__mdt.Apex_Method_Name__c</members>
+        <members>ApexLimitsConfiguration__mdt.Critical_From__c</members>
+        <members>ApexLimitsConfiguration__mdt.Critical_To__c</members>
+        <members>ApexLimitsConfiguration__mdt.Initial_From__c</members>
+        <members>ApexLimitsConfiguration__mdt.Initial_To__c</members>
+        <members>ApexLimitsConfiguration__mdt.Limit_Type__c</members>
+        <members>ApexLimitsConfiguration__mdt.NONE_FROM__c</members>
+        <members>ApexLimitsConfiguration__mdt.NONE_TO__c</members>
+        <members>ApexLimitsConfiguration__mdt.Partially_From__c</members>
+        <members>ApexLimitsConfiguration__mdt.Partially_To__c</members>
+        <members>ApexLimitsConfiguration__mdt.Quartely_From__c</members>
+        <members>ApexLimitsConfiguration__mdt.Quartely_To__c</members>
+        <members>Foo__c.TestData__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>ALL_RESOURCES_LEVEL_EVENT_MESSAGE</members>
+        <members>APEX_LIMITS_STYLER_NOT_NULL</members>
+        <members>APEX_LIMIT_TYPE_REQUIRED</members>
+        <members>CRITICAL_RESOURCE_LEVEL_EVENT</members>
+        <members>INITIAL_RESOURCE_LEVEL_EVENT</members>
+        <members>INVALID_OBJECT_TYPE</members>
+        <members>INVALID_SORTING_TYPE</members>
+        <members>NONE_RESOURCE_MESSAGE</members>
+        <members>NO_STACK_TRACE_FOUND</members>
+        <members>PARTIALLY_RESOURCE_LEVEL_EVENT</members>
+        <members>QUARTELY_RESOURCE_LEVEL_EVENT_MESSAGE</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
+    </types>
+    <types>
+        <members>ApexLimitsConfiguration__mdt</members>
+        <members>Foo__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>ApexLimitsConfiguration__mdt-ApexLimitsConfiguration Layout</members>
+        <members>Foo__c-Foo Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Foo__c.All</members>
+        <name>ListView</name>
+    </types>
+    <version>45.0</version>
 </Package>
