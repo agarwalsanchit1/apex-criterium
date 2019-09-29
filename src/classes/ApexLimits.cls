@@ -1235,11 +1235,13 @@ global abstract class ApexLimits {
                     ApexLimit startApxLimit = startMethdMetrics.getMetricsForLimitType(apxLmtType);
                     ApexLimit endApxLimit = endMethdMetrics.getMetricsForLimitType(apxLmtType);                    
                     Integer remaining = endApxLimit.getValue() - startApxLimit.getValue();
-                    boolean addNonConsumed = (remaining == 0 && includeNonConsumed == true);  // criteria for non-consumed apex resource
-                    if (addNonConsumed) {
-                     	continue;
-                    }
-                    snapDiff.add(startApxLimit.getFriendlyName(), remaining);                    
+                    if (remaining == 0) {
+                        if (includeNonConsumed) {
+                            snapDiff.add(startApxLimit.getFriendlyName(), remaining);
+                        }
+                    } else {
+                        snapDiff.add(startApxLimit.getFriendlyName(), remaining);     
+                    }                                                       
                 }
             }
             return snapDiff;
@@ -1259,7 +1261,7 @@ global abstract class ApexLimits {
         global override String className() { return MethodLevelMetrics.class.getName(); }   
         
         global override String toString() {
-            return ApexMapUtils.toString(this.limitSnapshot);
+            return ApexMapUtils.toString(this.className(), this.limitSnapshot);
         }
     }
     
