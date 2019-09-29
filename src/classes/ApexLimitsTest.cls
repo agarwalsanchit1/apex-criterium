@@ -1,6 +1,6 @@
 /*************************************************************************************************
-* This file is part of the apex-limit-framework project, released under the MIT License.             *
-* See LICENSE file or go to https://github.com/agarwalsanchit1/apex-limits-framework for full license details. *
+* This file is part of the apex-criterium project, released under the MIT License.             *
+* See LICENSE file or go to https://github.com/agarwalsanchit1/apex-criterium for full license details. *
 *************************************************************************************************/
 
 @isTest
@@ -13,26 +13,39 @@ public class ApexLimitsTest {
         }
     }
     
+    private static ApexLimits.IApexLimitStylePrinter stylePrinter = new TestApexLimitPrintStyle();
+    
     @isTest
     private static void testGetMap() {
         ApexLimits.getMap();
-        ApexLimits.getApexLimitList();
-        ApexLimits.printApexLimit(new TestApexLimitPrintStyle());
-        ApexLimits.getApexResourceAllocationTypeMap();
+        ApexLimits.getAll();
         ApexLimits.className();
         ApexLimits.getType();
-        System.assertEquals(false, ApexLimits.getQueryRowLimit().isEqualsTo(ApexLimits.getSoslQueriesLimit()));
+        try {ApexLimits.getMethodInitiationStackTrace(); } catch (Exception e ) {}
+        ApexLimits.performanceTestMethod();
+        System.assertEquals(false, ApexLimits.getQueryRowLimit().equalsTo(ApexLimits.getSoslQueriesLimit()));
         ApexLimits.apexLimitForType(ApexLimits.ApexLimitType.SOSL_QUERY_LIMIT).toString();
-        ApexLimits.createApexLimitImMutableObject(ApexLimits.ApexLimitType.SOSL_QUERY_LIMIT, Limits.getSoslQueries(), Limits.getLimitSoslQueries());
     }
     
     @isTest
-    private static void testApexHolderMethod() {
-        ApexLimits.HOLDER.clear();        
+    private static void testApexHolderMethod() {       
+        ApexLimits.getIApexLimitHolder().toJSONArrayString();            
+        ApexLimits.getIApexLimitHolder().getApexResourceAllocationTypeMap();         
+        ApexLimits.getIApexLimitHolder().printAllApexLimits(stylePrinter);       
+        ApexLimits.getIApexLimitHolder().printAllApexLimits(stylePrinter, ApexLimits.ApexLimitsSortingType.BY_CONSUMED_VALUE, false);        
+        ApexLimits.getIApexLimitHolder().clear(); 
     }
     
     @isTest
     private static void testApexLimitsMethods() {
+        ApexLimits.printLimitsUsingError();
+        ApexLimits.printLimitsUsingInfo();        
+        ApexLimits.printLimitsUsingWarn();
+        ApexLimits.printLimitsUsingDebug();
+        ApexLimits.printLimitsUsingFine();
+        ApexLimits.printLimitsUsingFiner();
+        ApexLimits.printLimitsUsingFinest();        
+        String.valueOf(ApexLimits.apexLimitForType(ApexLimits.ApexLimitType.SOSL_QUERY_LIMIT.name()));
         String.valueOf(ApexLimits.getSoslQueriesLimit());
         String.valueOf(ApexLimits.getQueryRowLimit());
         String.valueOf(ApexLimits.getQueryLocatorRowLimit());
@@ -48,7 +61,7 @@ public class ApexLimitsTest {
         String.valueOf(ApexLimits.getDmlStatementLimit());
         String.valueOf(ApexLimits.getEmailInvocationLimit());
         String.valueOf(ApexLimits.getAsyncCallLimit());
-        String.valueOf(ApexLimits.getEmailInvocationLimit().toApexLimitImMutableObject());
+        String.valueOf(ApexLimits.getEmailInvocationLimit().getCopy());
         String.valueOf(ApexLimits.getSoslQueriesLimit().className());
     }
     
@@ -66,7 +79,7 @@ public class ApexLimitsTest {
         sfObj.toPrettyJsonString();
         sfObj.printPretty();
         sfObj.printApexLimit(new TestApexLimitPrintStyle());
-        sfObj.className();
+        sfObj.className();        
         sfObj.evaluateLimit();
     }
 }
