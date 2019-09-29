@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ALL_RESOURCES_LEVEL_EVENT_MESSAGE</fullName>
+        <categories>APEX_LIMITS_FRAMEWORK</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ALL_RESOURCES_LEVEL_EVENT_MESSAGE</shortDescription>
+        <value>Time:{0}|User:{1}|UserTimeZone:{2}|UserType:{3}|OrganizationType:{4}|IsRest:{5}|isBatch:{6}|isTrigger:{7}|isFuture:{8}|IsLightning:{9}|IsLightningConsole:{10}|IsQueueable:{11}|IsSalesforce1:{12}|isScheduled:{13}|IsVisualforce:{14}|ClassName:{15}|MethodName:{16}|limit-type:{17}|limit-consumed:{18}|limit-reserved:{19}|limit-remaining:{20}|Msg : All the resources have been consumed. Please take care of your code.</value>
+    </labels>
+    <labels>
+        <fullName>APEX_LIMITS_STYLER_NOT_NULL</fullName>
+        <categories>APEX_LIMITS_FRAMEWORK</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>APEX_LIMITS_STYLER_NOT_NULL</shortDescription>
+        <value>The stylePrinter is required.</value>
+    </labels>
+    <labels>
+        <fullName>APEX_LIMIT_TYPE_REQUIRED</fullName>
+        <categories>APEX_LIMITS_FRAMEWORK</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>APEX_LIMIT_TYPE_REQUIRED#</shortDescription>
+        <value>Apex Limit Type is required.</value>
+    </labels>
+    <labels>
+        <fullName>CRITICAL_RESOURCE_LEVEL_EVENT</fullName>
+        <categories>APEX_LIMITS_FRAMEWORK</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CRITICAL_RESOURCE_LEVEL_EVENT_MESSAGE</shortDescription>
+        <value>Time:{0}|User:{1}|UserTimeZone:{2}|UserType:{3}|OrganizationType:{4}|IsRest:{5}|isBatch:{6}|isTrigger:{7}|isFuture:{8}|IsLightning:{9}|IsLightningConsole:{10}|IsQueueable:{11}|IsSalesforce1:{12}|isScheduled:{13}|IsVisualforce:{14}|ClassName:{15}|MethodName:{16}|limit-type:{17}|limit-consumed:{18}|limit-reserved:{19}|limit-remaining:{20}|Msg : All the resources for {0} are about to consume.</value>
+    </labels>
+    <labels>
+        <fullName>INITIAL_RESOURCE_LEVEL_EVENT</fullName>
+        <categories>APEX_LIMITS_FRAMEWORK</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>INITIAL_RESOURCE_LEVEL_EVENT_MESSAGE</shortDescription>
+        <value>Time:{0}|User:{1}|UserTimeZone:{2}|UserType:{3}|OrganizationType:{4}|IsRest:{5}|isBatch:{6}|isTrigger:{7}|isFuture:{8}|IsLightning:{9}|IsLightningConsole:{10}|IsQueueable:{11}|IsSalesforce1:{12}|isScheduled:{13}|IsVisualforce:{14}|ClassName:{15}|MethodName:{16}|limit-type:{17}|limit-consumed:{18}|limit-reserved:{19}|limit-remaining:{20}|Msg:The consumption of the apex resources have been started.</value>
+    </labels>
+    <labels>
+        <fullName>INVALID_OBJECT_TYPE</fullName>
+        <categories>APEX_LIMITS_FRAMEWORK</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>INVALID_OBJECT_TYPE</shortDescription>
+        <value>Invalid Object type provided !!!</value>
+    </labels>
+    <labels>
+        <fullName>INVALID_SORTING_TYPE</fullName>
+        <categories>APEX_LIMITS_FRAMEWORK</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>INVALID_SORTING_TYPE</shortDescription>
+        <value>Invalid sorting type !!!</value>
+    </labels>
+    <labels>
+        <fullName>NONE_RESOURCE_MESSAGE</fullName>
+        <categories>APEX_LIMITS_FRAMEWORK</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NONE_RESOURCE_MESSAGE</shortDescription>
+        <value>Time:{0}|User:{1}|UserTimeZone:{2}|UserType:{3}|OrganizationType:{4}|IsRest:{5}|isBatch:{6}|isTrigger:{7}|isFuture:{8}|IsLightning:{9}|IsLightningConsole:{10}|IsQueueable:{11}|IsSalesforce1:{12}|isScheduled:{13}|IsVisualforce:{14}|ClassName:{15}|MethodName:{16}|limit-type:{17}|limit-consumed:{18}|limit-reserved:{19}|limit-remaining:{20}|Msg:None of the resources have been consumed.</value>
+    </labels>
+    <labels>
+        <fullName>NO_STACK_TRACE_FOUND</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NO_STACK_TRACE_FOUND</shortDescription>
+        <value>No stack-trace found !!!</value>
+    </labels>
+    <labels>
+        <fullName>PARTIALLY_RESOURCE_LEVEL_EVENT</fullName>
+        <categories>APEX_LIMITS_FRAMEWORK</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PARTIALLY_RESOURCE_LEVEL_EVENT</shortDescription>
+        <value>Time:{0}|User:{1}|UserTimeZone:{2}|UserType:{3}|OrganizationType:{4}|IsRest:{5}|isBatch:{6}|isTrigger:{7}|isFuture:{8}|IsLightning:{9}|IsLightningConsole:{10}|IsQueueable:{11}|IsSalesforce1:{12}|isScheduled:{13}|IsVisualforce:{14}|ClassName:{15}|MethodName:{16}|limit-type:{17}|limit-consumed:{18}|limit-reserved:{19}|limit-remaining:{20}|Msg : Apex Resource consumed partially.</value>
+    </labels>
+    <labels>
+        <fullName>QUARTELY_RESOURCE_LEVEL_EVENT_MESSAGE</fullName>
+        <categories>APEX_LIMITS_FRAMEWORK</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>QUARTELY_RESOURCE_LEVEL_EVENT_MESSAGE</shortDescription>
+        <value>Time:{0}|User:{1}|UserTimeZone:{2}|UserType:{3}|OrganizationType:{4}|IsRest:{5}|isBatch:{6}|isTrigger:{7}|isFuture:{8}|IsLightning:{9}|IsLightningConsole:{10}|IsQueueable:{11}|IsSalesforce1:{12}|isScheduled:{13}|IsVisualforce:{14}|ClassName:{15}|MethodName:{16}|limit-type:{17}|limit-consumed:{18}|limit-reserved:{19}|limit-remaining:{20}|Msg : Apex Resource consumed quarterly.</value>
+    </labels>
+</CustomLabels>
