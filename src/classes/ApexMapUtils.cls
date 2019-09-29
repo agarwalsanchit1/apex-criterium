@@ -38,4 +38,9 @@ global class ApexMapUtils {
     global static String toString(Map<String,String> theMap){
         return '<Map#([' + joinMap(theMap,'=',';') + '])>';
     }
+
+
+    global static String toString(String mapClassName, Map<String,String> theMap){
+        return '<' + (String.isBlank(mapClassName) ? 'Map' : mapClassName) + '#([' + joinMap(theMap,'=',';') + '])>';
+    }
 }
