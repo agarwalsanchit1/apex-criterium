@@ -4,9 +4,9 @@
 *************************************************************************************************/
 
 global abstract with sharing class SystemEnvironment {
-
+    
     private static final Organization org;
- 
+    
     private SystemEnvironment() { }
     
     global static Organization getOrg() {
@@ -39,10 +39,14 @@ global abstract with sharing class SystemEnvironment {
     
     global Enum OrganizationType {
         Production, 
-        SandBox, 
-        Developer,
-        Unknown
-    }
+            SandBox, 
+            Developer,
+            DeveloperPro,
+            PartialCopy,
+            Partner_Developer,
+            Full,  
+            Unknown
+            }
     
     global static OrganizationType findOrganizationType() {
         if (!getOrg().isSandBox) return OrganizationType.Production;
