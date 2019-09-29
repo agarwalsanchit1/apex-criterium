@@ -3,9 +3,12 @@
 * See LICENSE file or go to https://github.com/agarwalsanchit1/apex-criterium for full license details. *
 *************************************************************************************************/
 
-global interface IClassName {
+global interface ISaveLimitsMetricsService  {
 
-    String className();
-    
-    System.Type getType();
+    ApexLimits.ApexLevelMetricsHolder getLimitsMetricsHolder();    
+    void commitMetrics();    
+    void commitMetricsAsync();
+    void commitMetricsAutomatically();
+    void setRangeToCommitMetricsAutomatically(Integer range);    
+    Integer getRangeToCommitMetricsAutomatically();
 }

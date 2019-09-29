@@ -3,9 +3,4 @@
 * See LICENSE file or go to https://github.com/agarwalsanchit1/apex-criterium for full license details. *
 *************************************************************************************************/
 
-global interface IClassName {
-
-    String className();
-    
-    System.Type getType();
-}
+global virtual class IllegalArgumentException extends Exception { }

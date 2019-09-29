@@ -3,9 +3,8 @@
 * See LICENSE file or go to https://github.com/agarwalsanchit1/apex-criterium for full license details. *
 *************************************************************************************************/
 
-global interface IClassName {
+global abstract class ApexLimitsAppConstants {
 
-    String className();
-    
-    System.Type getType();
+    global static Integer AUTO_COMMIT_METRICS_ENTRY_MIN_RANGE = 30;
+    global static Integer AUTO_COMMIT_METRICS_ENTRY_MAX_RANGE = 50;   
 }
