@@ -1,1 +1,0 @@
-global virtual class NullPointerException extends Exception {}
